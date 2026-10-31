@@ -35,13 +35,13 @@
         </form>
 
         <div class="filter-group" aria-label="待辦篩選">
-          <button type="button" class="filter-btn active" data-filter="all">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">
             全部
           </button>
-          <button type="button" class="filter-btn" data-filter="active">
+          <button type="button" class="filter-btn" data-filter="active" aria-pressed="false">
             未完成
           </button>
-          <button type="button" class="filter-btn" data-filter="completed">
+          <button type="button" class="filter-btn" data-filter="completed" aria-pressed="false">
             已完成
           </button>
         </div>
@@ -54,6 +54,13 @@
 
         <footer class="todo-footer">
           <span id="todo-count">未完成: 0 項</span>
+          <button
+            id="clear-completed"
+            class="clear-completed"
+            type="button"
+            aria-label="清除所有已完成的待辦事項"
+            hidden
+          >清除已完成</button>
         </footer>
       </section>
     </main>
